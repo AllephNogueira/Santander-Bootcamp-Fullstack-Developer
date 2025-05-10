@@ -2,4 +2,4 @@
 Java + Spring + Angular
 
 ## Links úteis 
-[Sintaxe basica markdown] (https://www.markdownguide.org/)
+[Sintaxe basica markdown](https://www.markdownguide.org/)
