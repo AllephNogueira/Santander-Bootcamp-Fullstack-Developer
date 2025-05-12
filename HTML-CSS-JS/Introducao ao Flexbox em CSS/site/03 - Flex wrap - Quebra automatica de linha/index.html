@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex wrap</title>
+    <style>
+        .flex-container {
+            height: 150px;
+            display: flex;
+            border: 5px solid #000;
+            max-width: 300px; /* Define a largura máxima do contêiner */
+
+        }
+        .item {
+            font-size: 20px;
+            height: 50%;
+            text-align: center;
+            min-width: 100px;
+            line-height: 50px; /* Alinha o texto verticalmente */
+
+        }
+
+        .nowrap {
+            flex-wrap: nowrap; /* Impede que os itens flexíveis se movam para a próxima linha */
+        }	
+
+        .wrap {
+            flex-wrap: wrap; /* Permite que os itens flexíveis se movam para a próxima linha */
+        }
+
+        .wrap-reverse {
+            flex-wrap: wrap-reverse; /* Permite que os itens flexíveis se movam para a próxima linha, mas na ordem inversa */
+        }
+
+        .cor{
+            background-color: blue;
+        }
+
+        .cor2 {
+            background-color: lightblue;
+        }
+
+        .cor3 {
+            background-color: orangered;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1>No wrap</h1>
+    <div class="flex-container nowrap">
+        <div class="item cor">item 1</div>
+        <div class="item cor2">item 2</div>
+        <div class="item cor3">item 3</div>
+        <div class="item cor3">item 3</div>
+        <div class="item cor3">item 3</div>
+        
+    </div>
+
+    <h1>Wrap</h1>
+    <div class="flex-container wrap"> <!-- Adiciona a classe wrap, quando nao houver mais espaço, esta adicionando a baixo.-->
+        <div class="item cor">item 1</div>
+        <div class="item cor2">item 2</div>
+        <div class="item cor3">item 3</div>
+        <div class="item cor">item 4</div>
+        <div class="item cor2">item 5</div>
+        <div class="item cor3">item 6</div>
+    </div>
+
+
+
+    <h1>Wrap-reverse</h1>
+    <div class="flex-container wrap-reverse"> 
+        <div class="item cor">item 1</div>
+        <div class="item cor2">item 2</div>
+        <div class="item cor3">item 3</div>
+        <div class="item cor">item 4</div>
+
+    </div>
+
+    
+</body>
+</html>
