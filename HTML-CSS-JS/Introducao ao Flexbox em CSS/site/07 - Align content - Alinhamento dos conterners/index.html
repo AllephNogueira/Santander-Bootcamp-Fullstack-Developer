@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Align content</title>
+    <style>
+
+        .container {
+            /* o container precisa ter uma largura maior que a nosso conteúdo */
+            height: 400px;
+            max-width: 300px;
+            display: flex;
+            flex-wrap: wrap; /* o flex-wrap precisa estar ativo para o align-content funcionar */
+            border: 1px solid black;
+        }
+
+        .item {
+            background-color: #f00;
+            padding: 0 5px;
+            margin: 5px;
+            flex: 1;
+            text-align: center;
+            color: white;
+            border: 2px solid #1695c7;
+        }
+
+        .stretch {
+            align-content: stretch;
+        }
+
+        .center {
+            align-content: center;
+        }
+
+        .start {
+            align-content: flex-start;
+        }
+
+        .end {
+            align-content: flex-end;
+        }
+
+        .around {
+            align-content: space-around;
+        }
+
+        .between {
+            align-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+
+    <p>Stretch - comportamento padrao</p>
+    <div class="container stretch">
+        <div class="item">husadhuasdhui</div>
+        <div class="item">lmçsflopdsfjosad</div>
+        <div class="item">iohasdyuiasydunkqwednk</div>
+        <div class="item">asda</div>
+        <div class="item">oiasdhiohiasd</div>
+        <div class="item">kasjodjioasd</div>
+        <div class="item">ihoasdhiihodsaihodashioiohdashio</div>
+    </div>
+
+    <p>Center - Coloca todos os container no meio </p>
+    <div class="container center">
+        <div class="item">husadhuasdhui</div>
+        <div class="item">lmçsflopdsfjosad</div>
+        <div class="item">iohasdyuiasydunkqwednk</div>
+        <div class="item">asda</div>
+        <div class="item">oiasdhiohiasd</div>
+        <div class="item">kasjodjioasd</div>
+        <div class="item">ihoasdhiihodsaihodashioiohdashio</div>
+    </div>
+
+
+    <p>Flex-Start - Pega todos os itens e leva para cima </p>
+    <div class="container start">
+        <div class="item">husadhuasdhui</div>
+        <div class="item">lmçsflopdsfjosad</div>
+        <div class="item">iohasdyuiasydunkqwednk</div>
+        <div class="item">asda</div>
+        <div class="item">oiasdhiohiasd</div>
+        <div class="item">kasjodjioasd</div>
+        <div class="item">ihoasdhiihodsaihodashioiohdashio</div>
+    </div>
+
+
+    <p>Flex - end - Pega todos os itens e leva para baixo </p>
+    <div class="container end">
+        <div class="item">husadhuasdhui</div>
+        <div class="item">lmçsflopdsfjosad</div>
+        <div class="item">iohasdyuiasydunkqwednk</div>
+        <div class="item">asda</div>
+        <div class="item">oiasdhiohiasd</div>
+        <div class="item">kasjodjioasd</div>
+        <div class="item">ihoasdhiihodsaihodashioiohdashio</div>
+    </div>
+
+    <p>space-around</p>
+    <div class="container around">
+        <div class="item">husadhuasdhui</div>
+        <div class="item">lmçsflopdsfjosad</div>
+        <div class="item">iohasdyuiasydunkqwednk</div>
+        <div class="item">asda</div>
+        <div class="item">oiasdhiohiasd</div>
+        <div class="item">kasjodjioasd</div>
+        <div class="item">ihoasdhiihodsaihodashioiohdashio</div>
+    </div>
+
+
+    <p>space-between</p>
+    <div class="container between">
+        <div class="item">husadhuasdhui</div>
+        <div class="item">lmçsflopdsfjosad</div>
+        <div class="item">iohasdyuiasydunkqwednk</div>
+        <div class="item">asda</div>
+        <div class="item">oiasdhiohiasd</div>
+        <div class="item">kasjodjioasd</div>
+        <div class="item">ihoasdhiihodsaihodashioiohdashio</div>
+    </div>
+
+
+    
+</body>
+</html>
