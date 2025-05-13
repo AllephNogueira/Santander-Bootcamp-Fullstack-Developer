@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify-content</title>
+
+    <style>
+        .container {
+            max-width: 400px;
+            border: 1px solid black;
+            margin: 0;
+            display: flex;
+        }
+
+        .item {
+            background-color: blueviolet;
+            margin: 5px;
+            text-align: center;
+            color: white;
+        }
+
+        .flex-start {
+            justify-content: flex-start; /* Padrao */
+        }
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+
+        .flex-center {
+            justify-content: center;
+        }
+
+        .flex-between {
+            justify-content: space-between;
+        }
+
+        .flex-space-around {
+            justify-content: space-around; /* Espaco igual entre os itens */
+            /* O primeiro e o ultimo item tem metade do espaco */
+        }
+
+        .flex-space-evenly {
+            justify-content: space-evenly; /* Espaco igual entre os itens */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>flex-start</h1>
+    <p>Aqui fica como o padrao</p>
+    <section class="container flex-start">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+    </section>
+
+
+    <h1>flex-end</h1>
+    <p>Leva todos os itens para o final</p>
+    <section class="container flex-end">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+    </section>
+
+
+    <h1>center</h1>
+    <p>Leva todos os itens para o centro.</p>
+    <section class="container flex-center">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+    </section>
+
+    <h1>space between</h1>
+    <p>Cria um espaçamento igual entre os itens.</p>
+    <section class="container flex-between">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+    </section>
+
+
+    <h1>space space-around</h1>
+    <section class="container flex-around">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+    </section>
+
+
+    <h1>space flex-space-evenly</h1>
+    <p>Espaço igual entre os itens.</p>
+    <section class="container flex-space-evenly">
+        <div class="item">1</div>
+        <div class="item">item 2</div>
+        <div class="item">outro item</div>
+    </section>
+    
+</body>
+</html>
