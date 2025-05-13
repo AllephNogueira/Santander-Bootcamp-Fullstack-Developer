@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align items</title>
+    <style>
+
+        .container {
+            max-width: 500px;
+            border: 1px solid black;
+            display: flex;
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1; /* Distribuição de tamanho igual entre os itens */
+        }
+
+        p{
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+
+        .center {
+            /* Alinhamento vertical 
+            Alinha os itens na mesma linha*/
+            align-items: center;
+        }
+
+        .stretch{
+            /* Aqui vamos colocar todos os itens do mesmo tamanho
+            Vamos colocar de acordo com o maior item
+            Se o item 1 for o maior, todos os outros devem ter o mesmo tamanho */
+            align-items: stretch;
+        }
+
+        .flex-start{
+            /* Alinha os itens no começo do container */
+            align-items: flex-start;
+        }
+
+        .flex-end{
+            /* Alinha os itens no final do container */
+            align-items: flex-end;
+        }
+
+        .baseline{
+            /* Alinha os itens na linha de base */
+            align-items: baseline;
+        }
+
+        .column{
+            /* Alinha os itens na coluna */
+            flex-direction: column;
+        }
+
+
+        .central{
+            /* Alinha os itens no centro */
+            height: 300px;
+            justify-content: center; /* Alinha os itens no centro e coloca um espaço igual entre eles.*/
+        }
+
+        .central .item{
+            /* Queremos usar a classe central, mas queremos acessar também a classe item */
+            flex: 0; /* Aqui vamos colocar o item no tamanho padrão */
+            padding: 20px; /* Aqui vamos colocar o padding */
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Row</h1>
+
+    <p>Center - Alinha os itens vertical</p>
+    <section class="container center">
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 Repare que se a gente for adicionando mais itens, ele vai crescer de acordo com a margem.</div>
+    </section>
+
+    <p>streatch - vai aumentar os itens de acordo com o maior, no exemplo a baixo o ultimo é o maior
+    <p>Então ele vai pegar os outros e vai por no tamanho do ultimo</p>
+    </p>
+
+    <section class="container  stretch">
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 Repare que se a gente for adicionando mais itens, ele vai crescer de acordo com a margem.</div>
+    </section>
+
+    <p>flex-start - Ele vai fazer o alinhamento baseado no inicio do contener</p>
+    <p>Ou seja, ele vai pegar a posição do primeiro item e vai alinhar os demais.</p>
+    <p>ele vai trazer todos os itens ao topo</p>
+    <section class="container  flex-start">
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 Repare que se a gente for adicionando mais itens, ele vai crescer de acordo com a margem.</div>
+    </section>
+
+    <p>flex-end - aqui vai ser a mesma coisa, mas vamos alinhar os itens ao final.</p>
+    <section class="container  flex-end">
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 Repare que se a gente for adicionando mais itens, ele vai crescer de acordo com a margem.</div>
+    </section>
+
+    <p>Baseline - alinhar os itens de acordo com uma linha</p>
+    <section class="container  baseline">
+        <div class="item"> <br> Item 1 </div>
+        <div class="item">item 2 dsadadasdasdad</div>
+        <div class="item">item 3 Repare que se a gente for adicionando mais itens, ele vai crescer de acordo com a margem.</div>
+    </section>
+
+
+    <h1 style="font-size: 40px; background-color: aquamarine;">Column</h1>
+    <h2>Aqui estamos usando em formato de coluna, e vai ser a mesma coisa, oque muda é a direção.</h2>
+    <section class="container  flex-start column">
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 Repare que se a gente for adicionando mais itens, ele vai crescer de acordo com a margem.</div>
+    </section>
+
+    <p>flex-end - aqui vai ser a mesma coisa, mas vamos alinhar os itens ao final.</p>
+    <section class="container  flex-end column">
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 Repare que se a gente for adicionando mais itens, ele vai crescer de acordo com a margem.</div>
+    </section>
+
+    <p>Center - Itens alinhado ao meio.</p>
+    <section class="container  center column">
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 Repare que se a gente for adicionando mais itens, ele vai crescer de acordo com a margem.</div>
+    </section>
+
+    <p>baseline</p>
+    <section class="container  baseline column">
+        <div class="item">Lorem ipsum dolor sit </div>
+        <div class="item">item 2</div>
+        <div class="item">item 3 Repare que se a gente for adicionando mais itens, ele vai crescer de acordo com a margem.</div>
+    </section>
+
+
+
+
+    <p>alinhamento central à tela</p>
+    <p>Ele sempre vai ficar no centro, respeitando todos os lados.</p>
+    <section class="container central center">
+        <div class="item">Lorem ipsum dolornde, dolorsunt commugiat soluta atque repudiandae? Obcaecati tempore ad ut vel adipisci.</div>
+
+    </section>
+
+
+
+
+    
+</body>
+</html>
