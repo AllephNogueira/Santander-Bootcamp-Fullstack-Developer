@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - Flex</title>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 400px;
+            margin: 10px ;
+        }
+
+        .item {
+            background-color: brown;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+        }
+
+
+        .flex-1{
+            flex: 1;
+            /* Estou dizendo para o CSS que vou ter o; 
+            grow = 1, shrink = 1 e basis = 0px
+            */
+
+            /* grow é a propriedade que diz quanto o item pode crescer em relação aos outros */
+            /* shrink é a propriedade que diz quanto o item pode encolher em relação aos outros */
+            /* basis é a propriedade que diz o tamanho inicial do item */
+        }
+
+        .largura{
+            width: 200px;
+            min-width: 250px;
+        }
+
+        .flex-2{
+            flex: 2;
+            /* Estou dizendo para o CSS que vou ter o; 
+            grow = 2, shrink = 1 e basis = 0px
+            */
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+    <p>flex-1</p>
+    <div class="flex-container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-1">BBB</div>
+        <div class="item flex-1">CC</div>
+        <div class="item flex-1">DF</div>
+    </div>
+
+
+    <p>flex-2 e 1</p>
+    <div class="flex-container">
+        <div class="item flex-1">A</div>
+        <div class="item flex-2">BBB</div>
+        <div class="item flex-2">CC</div>
+        <div class="item flex-1">D</div>
+        <div class="item flex-1">EF</div>
+    </div>
+
+
+    <p>width ignorado -> basis = 0</p>
+    <p>Repara que ele ignorou o largura, porque o basis já tem 0</p>
+    <p>basis define o tamanho inicial do item, usando o 0 ele ignora o width</p>
+    <p>width = 100px iria dizer que o basis deve começar com 100px</p>
+
+    <p>Ja usando o min-width ele vai tentar atender esse tamanho definido
+        <p>Colocando o basis para iniciar com no minimo 250px</p>
+    </p>
+    <div class="flex-container">
+        <div class="item flex-1 largura">BBB</div>
+        <div class="item flex-1 largura">CC</div>
+        <div class="item flex-1 largura">DF</div>
+        <div class="item flex-1 largura">A</div>
+    </div>
+
+    
+</body>
+</html>
