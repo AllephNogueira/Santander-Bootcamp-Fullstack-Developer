@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - flex basis</title>
+    <style>
+        .flex-container {
+            max-width: 500px;
+            border: 1px solid #0e0d0d;
+            display: flex;
+            background-color: #f0f0f0;
+            
+        }
+
+        .item {
+            background-color: #942982;
+            color: white;
+            margin: 5px;
+            text-align: center;
+        }
+
+        .bauto {
+            
+            flex-basis: auto;
+        }
+
+        .fg-1 {
+            /* Fator de crescimento */
+            flex-grow: 1;
+        }
+
+        .fg-2{
+            /* Fator de crescimento */
+            flex-grow: 2;
+        }
+
+
+        .b-0 {
+            
+            flex-basis: 0;
+        }
+
+        .w100 {
+            flex-basis: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <p>basis auto</p>
+    <div class="flex-container">
+        <div class="item bauto fg-1">A</div>
+        <div class="item bauto fg-1">BBB</div>
+        <div class="item bauto fg-1">C</div>
+        <div class="item bauto fg-2">DEF</div>
+    </div>
+
+    <p>basis 0</p>
+    <p>Usando dessa forma, ele vai tentar respeitar o tamanho dos itens.</p>
+    <p>Todos os itens vai ter o mesmo tamanho...</p>
+    <div class="flex-container">
+        <div class="item b-0 fg-1">AAAAAAA</div>
+        <div class="item b-0 fg-1">BBB</div>
+        <div class="item b-0 fg-1">C</div>
+        <div class="item b-0 fg-1">DEF</div>
+    </div>
+
+    <p>basis + width</p>
+    <p>Se a gente pegar uma regua, todos esses itens vai ter 100px</p>
+    <p>o basis trabalhamos com a medida minima.</p>
+    <p>fg2 ele vai tentar ocupar o proporcionalmente todo o container</p>
+    <p>pegou o espaço restante e dividiu entre meus itens</p>
+    <div class="flex-container">
+        <div class="item w100  fg-2">AAAAAAA</div>
+        <div class="item w100 fg-2">BBB</div>
+        <div class="item w100 fg-2">C</div>
+        <div class="item w100 fg-2">DEF</div>
+    </div>
+    
+</body>
+</html>
