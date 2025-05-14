@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos - order</title>
+
+    <style>
+        .flex-container {
+            display: flex;
+            max-width: 350px;
+            border: 1px solid black;
+            margin-bottom: 20px;
+            flex-direction: column;
+        }
+        .item{
+            flex: 1;
+            background-color: brown;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin: 5px;
+            
+        }
+
+        .or1{
+            order: 1;
+        }
+
+        .or2{
+            order: 2;
+        }
+
+        .or3{
+            order: 3;
+        }
+
+        /* Ordem pode ser a ordem que quiser, mas o padrao é 0 */
+
+
+
+    </style>
+</head>
+<body>
+    <p>order - por padrao ele vem com 0</p>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+
+
+    <p>order - por padrao ele vem com 0</p>
+    <div class="flex-container">
+        <div class="item or1">1</div>
+        <div class="item or3">2</div>
+        <div class="item or2">3</div>
+    </div>
+
+
+    <p>order - Ordenando uma lista de nomes</p>
+    <p>Aqui estamos ordenando esses nomes</p>
+    <div class="flex-container">
+        <div class="item or2">Gabriel</div>
+        <div class="item or1">Alleph</div>
+        <div class="item or3">Valeria</div>
+    </div>
+</body>
+</html>
