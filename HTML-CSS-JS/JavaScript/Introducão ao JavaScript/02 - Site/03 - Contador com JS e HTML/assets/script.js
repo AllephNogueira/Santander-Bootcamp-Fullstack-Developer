@@ -17,12 +17,41 @@ function decrementar() {
 }
 
 
-function verificarCor() {
-    
-    if (parseInt(numeroAtual.innerHTML) < 0) {
-    numeroAtual.style.color = 'red';
-    } else {
-        numeroAtual.style.color = 'black'; // Volta para preto se não for negativo
+
+
+
+
+// addEventListener é um evento que escuta o que acontece no click "botao"
+// Se o botao for clicado, ele vai executar a algo dentro do escopo dele.
+
+
+document.getElementById('diminuir').addEventListener("click", function() {
+
+    // Repara a diferença, aqui estamos pegando o valor do elemento e convertendo ele para inteiro.
+    let numeroAtual = parseInt(document.getElementById('valor-atual').innerHTML)
+
+
+    if (numeroAtual < 0) {
+        // Desabilitando um botao quando chegar a baixo de 0
+        // Atenção função dissabled só funciona para botoes.
+        document.getElementById('diminuir').disabled = true
+
+        let valorDaPagina = document.getElementById('valor-atual')
+        valorDaPagina.style.color = 'red' // Aqui estamos mudando o elemento para a cor vermelha.
+        
+        
     }
 
-}
+})
+
+document.getElementById('aumentar').addEventListener("click", function() { 
+
+    // Pegando o valor do elemento e convertendo ele para inteiro.
+    let numeroAtual = parseInt(document.getElementById('valor-atual').innerHTML)
+
+    if (numeroAtual > 0) {
+        // Mudando o elemento para a cor preta.
+        document.getElementById('valor-atual').style.color = 'black'; // Muda a cor para preto
+    }
+ })
+

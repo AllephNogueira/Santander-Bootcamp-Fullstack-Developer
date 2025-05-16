@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.flex-container{
+
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: flex-start;     /* Alinha verticalmente */
+    margin-top: 20px;
+    /* Apos a gente dizer que ele poderia ter no maximo 900px(50% da tela), ele foi para o canto
+    Usamos o margin auto, para colocar ele com 900px, mas no meio da tela. */
+    width: 50%;
+    margin: auto; 
+    height: 700px; /* Altura maxima que ele pode chegar */
+
+}
+
+
+.container {
+
+    width: 60%;
+    text-align: center; /* Alinhamento do texto no centro da tela */
+    
+}
+
+.container h1 {
+    margin-bottom: 5%;
+    font-size: 3rem;
+}
+
+.container div {
+    margin-bottom: 2%;
+}
+
+#minha-lista ul li {
+    list-style-type: none;
+}
+
+
+
+.feito {
+    text-decoration: line-through;
+    color: gray;
+}
+
+button {
+    margin-left: 10px;
+    cursor: pointer;
+}

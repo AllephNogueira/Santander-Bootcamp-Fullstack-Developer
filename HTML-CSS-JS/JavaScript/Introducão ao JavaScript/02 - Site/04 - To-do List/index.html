@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="flex-container">
+        
+
+            <div class="container">
+                <h1>To-do List</h1>
+
+                <div>
+                    <input type="text" name="itemInput" placeholder="Digite uma tarefa" id="eventoList">
+                    <button onclick="capturarTexto()">Adicionar</button>
+                </div>
+
+                <div id="minha-lista">
+                    <ul id="listaTarefas">
+                        <li>
+                            Estudar JavaScript 
+                            <button onclick="riscarTarefa(this)">✓</button>
+                        </li>
+                        <li>
+                            Fazer exercício 
+                            <button onclick="riscarTarefa(this)">✓</button>
+                        </li>
+                    </ul>
+                </div>
+
+        </div>
+
+    
+
+    </div>
+
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
