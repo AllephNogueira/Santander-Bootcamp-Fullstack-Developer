@@ -13,3 +13,12 @@ const verificarNumber = typeof nascimento === "number"
 
 verificarNumber ? "Verdadeiro" : "Falso"
 console.log(verificarNumber)
+
+
+// LEMBRAR QUE PODEMOS FAZER UMA VARIAVEL SER STRING E NO USO DO CODIGO PODEMOS ALTERAR PARA INT
+
+var nomeESobreNome = "alleph"
+console.log(typeof nomeESobreNome)
+
+var nomeESobreNome = 1994 // Aqui estamos reatribuindo, passando agora para inteiro.
+console.log(typeof nomeESobreNome)
